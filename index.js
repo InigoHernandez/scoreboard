@@ -47,6 +47,54 @@ console.log(scoreHome);
 let scoreGuest = document.getElementById("score-guest");
 console.log(scoreGuest);
 
+// Load saved titles from localStorage
+var titleHome = document.getElementById("title-home");
+var titleGuest = document.getElementById("title-guest");
+
+// Load saved titles on page load
+if (localStorage.getItem("titleHome")) {
+  titleHome.textContent = localStorage.getItem("titleHome");
+}
+if (localStorage.getItem("titleGuest")) {
+  titleGuest.textContent = localStorage.getItem("titleGuest");
+}
+
+// Make titles editable and auto-save
+titleHome.addEventListener("blur", function() {
+  var text = this.textContent.trim();
+  if (text === "") {
+    this.textContent = "Home";
+    localStorage.setItem("titleHome", "Home");
+  } else {
+    localStorage.setItem("titleHome", text);
+  }
+});
+
+titleGuest.addEventListener("blur", function() {
+  var text = this.textContent.trim();
+  if (text === "") {
+    this.textContent = "Guest";
+    localStorage.setItem("titleGuest", "Guest");
+  } else {
+    localStorage.setItem("titleGuest", text);
+  }
+});
+
+// Save on Enter key press
+titleHome.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    this.blur();
+  }
+});
+
+titleGuest.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    this.blur();
+  }
+});
+
 function add1Home() {
   countHome += 1
   scoreHome.textContent = countHome
