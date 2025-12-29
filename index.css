@@ -120,6 +120,10 @@ button:active {
     cursor: text;
     outline: none;
     transition: background-color 0.2s ease;
+    max-width: 420px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .title:hover {
@@ -195,7 +199,7 @@ button:active {
 
 #play-btn {
     margin: auto 0 24px 0;
-    padding: calc(clamp(0.75rem, 2vw, 1rem) + 4px) clamp(1.5rem, 3vw, 2rem);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
     border-radius: clamp(25px, 4vw, 40px);
     font-family: aspekta;
     font-size: clamp(1rem, 2.5vw, 1.75rem);
@@ -220,7 +224,7 @@ button:active {
 }
 
 #play-icon {
-    font-size: clamp(1rem, 2.3vw, 1.3rem);
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
     display: inline-flex;
     align-items: center;
     line-height: 1;
@@ -232,12 +236,11 @@ button:active {
     display: inline-flex;
     align-items: center;
     line-height: 1;
-    transform: translateY(-2px);
 }
 
 #reset-btn {
     margin: 0 0 clamp(1.5rem, 4vw, 3.5rem) 0;
-    padding: calc(clamp(0.75rem, 2vw, 1rem) + 4px) clamp(1.5rem, 3vw, 2rem);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
     border-radius: clamp(25px, 4vw, 40px);
     font-family: aspekta;
     font-size: clamp(1rem, 2.5vw, 1.75rem);
@@ -254,7 +257,7 @@ button:active {
 }
 
 #reset-icon {
-    font-size: clamp(1rem, 2.3vw, 1.3rem);
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
     display: inline-flex;
     align-items: center;
     line-height: 1;
@@ -266,7 +269,6 @@ button:active {
     display: inline-flex;
     align-items: center;
     line-height: 1;
-    transform: translateY(-2px);
 }
 
 #reset-btn:hover {

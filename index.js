@@ -61,6 +61,35 @@ if (localStorage.getItem("titleGuest")) {
   titleGuest.textContent = localStorage.getItem("titleGuest");
 }
 
+// Limit input to 16 characters
+titleHome.addEventListener("input", function() {
+  var text = this.textContent;
+  if (text.length > 16) {
+    this.textContent = text.substring(0, 16);
+    // Move cursor to end
+    var range = document.createRange();
+    var sel = window.getSelection();
+    range.setStart(this.childNodes[0] || this, this.textContent.length);
+    range.collapse(true);
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+});
+
+titleGuest.addEventListener("input", function() {
+  var text = this.textContent;
+  if (text.length > 16) {
+    this.textContent = text.substring(0, 16);
+    // Move cursor to end
+    var range = document.createRange();
+    var sel = window.getSelection();
+    range.setStart(this.childNodes[0] || this, this.textContent.length);
+    range.collapse(true);
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+});
+
 // Make titles editable and auto-save
 titleHome.addEventListener("blur", function() {
   var text = this.textContent.trim();
