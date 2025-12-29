@@ -1,12 +1,34 @@
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
-setInterval(setTime, 1000);
+var timerInterval = null; // Store the interval ID so we can clear it
+var isTimerRunning = false; // Track if timer is running
 
 function setTime() {
   ++totalSeconds;
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function toggleTimer() {
+  var playBtn = document.getElementById("play-btn");
+  var playIcon = document.getElementById("play-icon");
+  var playText = document.getElementById("play-text");
+  
+  if (isTimerRunning) {
+    // Pause the timer
+    clearInterval(timerInterval);
+    timerInterval = null;
+    isTimerRunning = false;
+    playIcon.classList.remove("pause");
+    playText.textContent = " Play";
+  } else {
+    // Start the timer
+    timerInterval = setInterval(setTime, 1000);
+    isTimerRunning = true;
+    playIcon.classList.add("pause");
+    playText.textContent = " Pause";
+  }
 }
 
 function pad(val) {
@@ -62,8 +84,19 @@ function resetScore() {
   countGuest = 0
   scoreGuest.textContent = countGuest
   
-  // Reset timer
+  // Reset and stop timer
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+  isTimerRunning = false;
   totalSeconds = 0
   secondsLabel.innerHTML = pad(0)
   minutesLabel.innerHTML = pad(0)
+  
+  // Reset play button to play state
+  var playIcon = document.getElementById("play-icon");
+  var playText = document.getElementById("play-text");
+  playIcon.classList.remove("pause");
+  playText.textContent = " Play";
 }
