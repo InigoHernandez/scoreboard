@@ -195,7 +195,7 @@ button:active {
 
 #play-btn {
     margin: auto 0 24px 0;
-    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    padding: calc(clamp(0.75rem, 2vw, 1rem) + 4px) clamp(1.5rem, 3vw, 2rem);
     border-radius: clamp(25px, 4vw, 40px);
     font-family: aspekta;
     font-size: clamp(1rem, 2.5vw, 1.75rem);
@@ -220,46 +220,24 @@ button:active {
 }
 
 #play-icon {
-    display: inline-block;
-    line-height: 1;
-    width: 0;
-    height: 0;
-    border-left: clamp(0.5rem, 1.2vw, 0.75rem) solid currentColor;
-    border-top: clamp(0.35rem, 0.9vw, 0.5rem) solid transparent;
-    border-bottom: clamp(0.35rem, 0.9vw, 0.5rem) solid transparent;
-    margin-right: 0.1em;
-    vertical-align: middle;
-}
-
-#play-icon.pause {
+    font-size: clamp(1rem, 2.3vw, 1.3rem);
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: clamp(0.15rem, 0.4vw, 0.2rem);
-    width: auto;
-    height: clamp(0.75rem, 1.8vw, 1rem);
-    border: none;
-    margin-right: 0;
+    line-height: 1;
     vertical-align: middle;
-}
-
-#play-icon.pause::before,
-#play-icon.pause::after {
-    content: '';
-    width: clamp(0.2rem, 0.5vw, 0.3rem);
-    height: 100%;
-    background-color: currentColor;
-    display: block;
-    flex-shrink: 0;
 }
 
 #play-text {
     margin-left: clamp(1rem, 2.5vw, 1.25rem);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    transform: translateY(-2px);
 }
 
 #reset-btn {
     margin: 0 0 clamp(1.5rem, 4vw, 3.5rem) 0;
-    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    padding: calc(clamp(0.75rem, 2vw, 1rem) + 4px) clamp(1.5rem, 3vw, 2rem);
     border-radius: clamp(25px, 4vw, 40px);
     font-family: aspekta;
     font-size: clamp(1rem, 2.5vw, 1.75rem);
@@ -269,6 +247,26 @@ button:active {
     transition: 0.3s;
     transition-timing-function: ease;
     width: clamp(160px, 28vw, 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#reset-icon {
+    font-size: clamp(1rem, 2.3vw, 1.3rem);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+#reset-text {
+    margin-left: clamp(1rem, 2.5vw, 1.25rem);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    transform: translateY(-2px);
 }
 
 #reset-btn:hover {

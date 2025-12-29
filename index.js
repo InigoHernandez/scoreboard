@@ -20,13 +20,15 @@ function toggleTimer() {
     clearInterval(timerInterval);
     timerInterval = null;
     isTimerRunning = false;
-    playIcon.classList.remove("pause");
+    playIcon.classList.remove("fa-pause");
+    playIcon.classList.add("fa-play");
     playText.textContent = " Play";
   } else {
     // Start the timer
     timerInterval = setInterval(setTime, 1000);
     isTimerRunning = true;
-    playIcon.classList.add("pause");
+    playIcon.classList.remove("fa-play");
+    playIcon.classList.add("fa-pause");
     playText.textContent = " Pause";
   }
 }
@@ -145,6 +147,7 @@ function resetScore() {
   // Reset play button to play state
   var playIcon = document.getElementById("play-icon");
   var playText = document.getElementById("play-text");
-  playIcon.classList.remove("pause");
+  playIcon.classList.remove("fa-pause");
+  playIcon.classList.add("fa-play");
   playText.textContent = " Play";
 }
