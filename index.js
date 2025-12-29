@@ -56,8 +56,14 @@ function add3Guest () {
 }
 
 function resetScore() {
+  // Reset scores
   countHome = 0
   scoreHome.textContent = countHome
   countGuest = 0
   scoreGuest.textContent = countGuest
+  
+  // Reset timer
+  totalSeconds = 0
+  secondsLabel.innerHTML = pad(0)
+  minutesLabel.innerHTML = pad(0)
 }
