@@ -112,18 +112,19 @@ button:active {
 .title {
     margin-top: clamp(1.5rem, 4vw, 3rem);
     margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+    display: inline-block;
     padding: clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 2vw, 1.5rem);
     min-height: clamp(1rem, 2vw, 1.5rem);
     cursor: text;
     outline: none;
     transition: background-color 0.2s ease;
     max-width: 420px;
+    width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    word-break: break-all;
+    box-sizing: border-box;
 }
 
 .title:hover {
