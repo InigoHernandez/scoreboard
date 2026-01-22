@@ -13,6 +13,7 @@
   --light-trans-mid: rgba(255, 255, 255, 0.6);
   --light-trans-light: rgba(255, 255, 255, 0.05);
   --yellow: #C3F73A;
+  --dark-yellow: #a1ce2f;
   --yellow-trans: rgba(195,247,58, 0.5);
 }
 
@@ -217,7 +218,8 @@ button:active {
 }
 
 #play-btn:hover {
-    background-color: var(--dark);
+    background-color: var(--dark-yellow;
+    color: var(--dark);
 }
 
 #play-btn:active {
