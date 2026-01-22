@@ -4,7 +4,8 @@ A sleek, digital-style basketball scoreboard built to experiment with frontend s
 
 **Live Demo:** [scorepoints.netlify.app](https://scorepoints.netlify.app/)
 
-<img width="1315" height="835" alt="Scoreboard" src="https://github.com/user-attachments/assets/72c2a721-734d-4ca5-9e55-1521b17c2382" />
+<img width="1512" height="856" alt="Scoreboard" src="https://github.com/user-attachments/assets/066b00f0-1f1b-4fe4-aaa2-433128b6d364" />
+
 
 
 ## ✨ Features
