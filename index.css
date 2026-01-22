@@ -218,7 +218,7 @@ button:active {
 }
 
 #play-btn:hover {
-    background-color: var(--dark-yellow;
+    background-color: var(--dark-yellow);
     color: var(--dark);
 }
 
