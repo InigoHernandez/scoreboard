@@ -204,9 +204,9 @@ button:active {
     border-radius: clamp(25px, 4vw, 40px);
     font-family: aspekta;
     font-size: clamp(1rem, 2.5vw, 1.75rem);
-    background-color: var(--black);
+    background-color: var(--dark);
     color: var(--light);
-    border: 1px solid var(--light-trans);
+    border: 1px solid var(--dark-trans);
     transition: 0.3s;
     transition-timing-function: ease;
     display: flex;
