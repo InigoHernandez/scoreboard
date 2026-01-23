@@ -1,6 +1,6 @@
 @font-face {
   font-family: aspekta; /* set name */
-  src: url(AspektaVF.woff2); /* url of the font */
+src: url(fonts/AspektaVF.woff2); /* url of the font */  
 }
 
 :root {
