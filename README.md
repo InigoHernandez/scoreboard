@@ -2,7 +2,7 @@
 
 A sleek, digital-style basketball scoreboard built to experiment with frontend state, DOM manipulation, and real-time timers.
 
-**Live Demo:** [scorepoints.netlify.app](https://inigohernandez.github.io/scoreboard/)
+**Live Demo:** [LINK](https://inigohernandez.github.io/scoreboard/)
 
 <img width="1512" height="856" alt="Scoreboard" src="https://github.com/user-attachments/assets/066b00f0-1f1b-4fe4-aaa2-433128b6d364" />
 
